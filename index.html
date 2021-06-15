@@ -58,7 +58,6 @@
     <script>
       let menuList = document.getElementById("menuList");
       menuList.style.maxHeight = "0px";
-
       function togglemenu() {
         if (menuList.style.maxHeight == "0px") {
           menuList.style.maxHeight = "130px";
@@ -66,17 +65,7 @@
           menuList.style.maxHeight = "0px";
         }
       }
-
-      let page = document.querySelector("body");
-      let icon = document.querySelector(".themeMode button");
-      function changeTheme() {
-        page.classList.toggle("dark");
-        if (page.classList.value == "dark") {
-          icon.innerHTML = '<i class="fa fa-moon-o" aria-hidden="true"></i>';
-        } else {
-          icon.innerHTML = '<i class="fa fa-sun-o"></i>';
-        }
-      }
     </script>
+    <script src="./scripts/changeTheme.js"></script>
   </body>
 </html>

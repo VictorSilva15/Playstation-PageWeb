@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Gaming Website Page - Easy Tutorials</title>
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="navbar">
+        <img src="img/logo.png" alt="Logo" class="logo" />
+        <nav>
+          <ul id="menuList">
+            <li><a href="#">Game Controllers</a></li>
+            <li><a href="#">VR Accessories</a></li>
+            <li><a href="#">Media Remotes</a></li>
+            <li><a href="#">Others</a></li>
+          </ul>
+        </nav>
+        <i class="fa fa-bars menu-icon" onclick="togglemenu()"></i>
+      </div>
+      <div class="row">
+        <div class="col-1">
+          <h2>PS4 V2<br />Dualshock 4</h2>
+          <h3>Wireless Controller for Playstation 4</h3>
+          <p>(Compatible/Generic)</p>
+          <h4>$32.50</h4>
+          <button class="button" type="button">
+            Buy Now <img src="./img/arrow.png" alt="arrow" />
+          </button>
+        </div>
+        <div class="col-2">
+          <img src="./img/controller.png" alt="controller" class="controller" />
+          <div class="color-box"></div>
+          <div class="add-btn">
+            <img src="./img/add.png" alt="add" />
+            <p><small>Add to Cart</small></p>
+          </div>
+        </div>
+      </div>
+      <div class="social-links">
+        <i class="fa fa-facebook-official" aria-hidden="true"></i>
+        <i class="fa fa-twitter" aria-hidden="true"></i>
+        <i class="fa fa-instagram" aria-hidden="true"></i>
+      </div>
+      <div class="themeMode">
+        <button type="button" onclick="changeTheme()">
+          <i class="fa fa-sun-o"></i>
+        </button>
+      </div>
+    </div>
+    <script>
+      let menuList = document.getElementById("menuList");
+      menuList.style.maxHeight = "0px";
+
+      function togglemenu() {
+        if (menuList.style.maxHeight == "0px") {
+          menuList.style.maxHeight = "130px";
+        } else {
+          menuList.style.maxHeight = "0px";
+        }
+      }
+
+      let page = document.querySelector("body");
+      let icon = document.querySelector(".themeMode button");
+      function changeTheme() {
+        page.classList.toggle("dark");
+        if (page.classList.value == "dark") {
+          icon.innerHTML = '<i class="fa fa-moon-o" aria-hidden="true"></i>';
+        } else {
+          icon.innerHTML = '<i class="fa fa-sun-o"></i>';
+        }
+      }
+    </script>
+  </body>
+</html>
